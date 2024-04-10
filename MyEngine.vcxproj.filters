@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="源文件\FunctionsLayer">
+      <UniqueIdentifier>{10458f2d-1036-4b59-bf82-d7707f7168b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\FunctionsLayer">
+      <UniqueIdentifier>{b61fd18b-f474-4f7e-808b-d117bd62c3c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Tools">
+      <UniqueIdentifier>{0230d588-5a20-42bf-8ace-37bef343d482}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Tools">
+      <UniqueIdentifier>{5251aa7c-79d6-4928-93a8-b84254f1d705}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\scripts">
+      <UniqueIdentifier>{819a949c-4e9a-4094-bd07-87fcf42a8528}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\ResourceLayer">
+      <UniqueIdentifier>{f16c0501-9b39-4a05-b582-dd2f362b2416}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\ResourceLayer">
+      <UniqueIdentifier>{7d16f99b-91aa-4a5d-b52b-3a5dba799657}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\PrefabManager">
+      <UniqueIdentifier>{b531b421-9a94-4491-97ab-5218a4e1b820}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\PrefabManager">
+      <UniqueIdentifier>{f1bfd4a8-8755-4de9-b1f4-897f867d2028}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\GameObjectManager">
+      <UniqueIdentifier>{69d086f6-ad8a-4827-b163-3917056d93b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CoreLayer">
+      <UniqueIdentifier>{1e0d515b-31a5-4d61-beac-6743b7b36df2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Component.cpp">
+      <Filter>源文件\FunctionsLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>源文件\FunctionsLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>源文件\FunctionsLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="Rigidbody.cpp">
+      <Filter>源文件\FunctionsLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>源文件\FunctionsLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="Script.cpp">
+      <Filter>源文件\FunctionsLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="glad.c">
+      <Filter>源文件\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AliceScript.cpp">
+      <Filter>源文件\scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="Rect.cpp">
+      <Filter>源文件\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>源文件\ResourceLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\chess\棋\MyShader.cpp">
+      <Filter>源文件\ResourceLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture2D.cpp">
+      <Filter>源文件\ResourceLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="PrefabManager.cpp">
+      <Filter>源文件\PrefabManager</Filter>
+    </ClCompile>
+    <ClCompile Include="HosinoScript.cpp">
+      <Filter>源文件\scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="SnakeScript.cpp">
+      <Filter>源文件\scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjectManager.cpp">
+      <Filter>源文件\GameObjectManager</Filter>
+    </ClCompile>
+    <ClCompile Include="InputListener.cpp">
+      <Filter>源文件\FunctionsLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="MousePos.cpp">
+      <Filter>CoreLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="KokomiScript.cpp">
+      <Filter>源文件\scripts</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Component.h">
+      <Filter>头文件\FunctionsLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>头文件\FunctionsLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>头文件\FunctionsLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="Rigidbody.h">
+      <Filter>头文件\FunctionsLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
+      <Filter>头文件\FunctionsLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="Script.h">
+      <Filter>头文件\FunctionsLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="stb_image.h">
+      <Filter>头文件\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Globaldefine.h">
+      <Filter>源文件\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="AliceScript.h">
+      <Filter>源文件\scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="Rect.h">
+      <Filter>头文件\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>头文件\ResourceLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\chess\棋\MyShader.h">
+      <Filter>头文件\ResourceLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture2D.h">
+      <Filter>头文件\ResourceLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="PrefabManager.h">
+      <Filter>头文件\PrefabManager</Filter>
+    </ClInclude>
+    <ClInclude Include="HosinoScript.h">
+      <Filter>源文件\scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="SnakeScript.h">
+      <Filter>源文件\scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjectManager.h">
+      <Filter>源文件\GameObjectManager</Filter>
+    </ClInclude>
+    <ClInclude Include="InputListener.h">
+      <Filter>头文件\FunctionsLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="MousePos.h">
+      <Filter>CoreLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="KokomiScript.h">
+      <Filter>源文件\scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="vertex.vs">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="fragment.fs">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+</Project>
