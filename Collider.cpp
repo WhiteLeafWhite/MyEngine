@@ -1,5 +1,5 @@
 #include "Collider.h"
-
+#include "GameObjectManager.h"
 Collider::Collider()
 {
 	adjustBox(0,0,0,0);
@@ -8,6 +8,11 @@ Collider::Collider()
 Collider::Collider(float x, float y, float width, float height)
 {
 	adjustBox(x, y, width, height);
+}
+
+GameObject& Collider::getObject()
+{
+	return GameObjectManager::getinstance()->getObject(gameObjectID);
 }
 
 void Collider::adjustBox(float x, float y, float width, float height)

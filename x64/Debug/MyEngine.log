@@ -1,4 +1,4 @@
 ﻿  KokomiScript.cpp
 D:\my_game\MyEngine\MyShader.h(4,10): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
-D:\my_game\MyEngine\KokomiScript.cpp(39,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+D:\my_game\MyEngine\KokomiScript.cpp(40,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
   MyEngine.vcxproj -> D:\my_game\MyEngine\x64\Debug\MyEngine.exe

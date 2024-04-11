@@ -99,6 +99,8 @@ int main() {
 	PrefabManager::LoadPrefab(makekokomi, "kokomi");
 	//生成一些GameObject
 	GameObjectManager::getinstance()->emplace_go(PrefabManager::MakePrefab("kokomi"));
+	GameObjectManager::getinstance()->emplace_go(PrefabManager::MakePrefab("kokomi"));
+	GameObjectManager::getinstance()->emplace_go(PrefabManager::MakePrefab("kokomi"));
 	GameObjectManager::getinstance()->start_all();
 	while (!glfwWindowShouldClose(window))
 	{
@@ -165,9 +167,12 @@ GameObject makebigsnake()
 GameObject makekokomi()
 {
 	GameObject kokomi;
+	kokomi.name = "珊瑚宫心海";
 	Renderer r(ResourceManager::GetShader("characterShader"), ResourceManager::GetTexture("kokomiTexture"));
 	kokomi.addRenderer(r);
 	KokomiScript s;
 	kokomi.addScript("KokomiScript");
+	Collider c;
+	kokomi.addCollider(c);
 	return kokomi;
 }

@@ -24,6 +24,7 @@ void KokomiScript::notOnMouse()
 
 void whatCanISay(GameObject* me) {
 	std::cout << me->position.x << " " << me->position.y << std::endl;
+	log(me->getCollider()->getObject().name);
 }
 
 void KokomiScript::onClick(GameObject* me)
