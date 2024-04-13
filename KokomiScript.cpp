@@ -23,14 +23,14 @@ void KokomiScript::notOnMouse()
 }
 
 void whatCanISay(GameObject* me) {
-	std::cout << me->position.x << " " << me->position.y << std::endl;
+	std::cout << me->getPosition().x << " " << me->getPosition().y << std::endl;
 	log(me->getCollider()->getObject().name);
 }
 
 void KokomiScript::onClick(GameObject* me)
 {
 	if (this->mouseFocus) {
-		me->position = glm::vec2(rand() % 500, rand() % 500);
+		me->SetPostion(rand() % 500, rand() % 500);
 		whatCanISay(me);
 	}
 }
@@ -42,26 +42,30 @@ void KokomiScript::start(GameObject* me)
 	inputListener.addMouseOn(&KokomiScript::onMouse,this);
 	inputListener.addMouseNotOn(&KokomiScript::notOnMouse, this);
 	inputListener.addCallback('W', [](GameObject* me) {
-		me->Translate(0, -50);
+		if(me->name=="珊瑚宫心海1")
+			me->Translate(0, -50);
 		whatCanISay(me);
 		}, me);
 	inputListener.addCallback('S', [](GameObject* me) {
-		me->Translate(0, 50);
+		if (me->name == "珊瑚宫心海1")
+			me->Translate(0, 50);
 		whatCanISay(me);
 		}, me);
 	inputListener.addCallback('A', [](GameObject* me) {
-		me->Translate(-50, 0);
+		if (me->name == "珊瑚宫心海1")
+			me->Translate(-50, 0);
 		whatCanISay(me);
 		}, me);
 	inputListener.addCallback('D', [](GameObject* me) {
-		me->Translate(50,0);
+		if (me->name == "珊瑚宫心海1")
+			me->Translate(50,0);
 		whatCanISay(me);
 		}, me);
 }
 
 void KokomiScript::onColliderEnter(GameObject* me,Collider& co)
 {
-	me->position = glm::vec2(rand() % 500, rand() % 500);
+	me->SetPostion(rand() % 500, rand() % 500);
 }
 
 Script* KokomiScript::instance()

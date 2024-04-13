@@ -15,7 +15,7 @@ public:
 	GameObject& getObject(int id);
 private:
 	static GameObjectManager* gomanager;
-	GameObjectManager():idCounter(0) {}
+	GameObjectManager() :idCounter(0){}
 	GameObjectManager(const GameObjectManager& gm) = delete;
 	GameObjectManager operator =(const GameObjectManager& x) = delete;
 	static std::mutex gom_mutex;

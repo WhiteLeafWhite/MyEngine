@@ -24,6 +24,7 @@ private:
 	Collider collider;
 	bool scriptIsNewed;
 	std::string scriptName;
+	glm::vec2 position;
 public:
 	Script *script;
 	//名字
@@ -33,7 +34,8 @@ public:
 	//自身的位置，大小，旋转角度
 	glm::vec2 size;
 	float angle;
-	glm::vec2 position;
+	glm::vec2 getPosition();
+	void SetPostion(float xx, float yy);
 	void Translate(float deltaX,float deltaY);
 	void Rotate(float deltaA);
 	void Scale(float dwidth, float dheight);

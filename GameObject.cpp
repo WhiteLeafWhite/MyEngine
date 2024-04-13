@@ -15,6 +15,21 @@ GameObject::GameObject()
 	component[3] = false;
 }
 
+glm::vec2 GameObject::getPosition()
+{
+	return position;
+}
+
+void GameObject::SetPostion(float xx, float yy)
+{
+	position.x = xx;
+	position.y = yy;
+	if (component[2]) {
+		getCollider()->adjustBox(position.x, position.y, size.x, size.y);
+	}
+	return;
+}
+
 void GameObject::Translate(float deltaX, float deltaY)
 {
 	position.x += deltaX;

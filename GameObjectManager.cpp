@@ -45,17 +45,23 @@ void GameObjectManager::start_all()
 
 void GameObjectManager::updateScript_all()
 {
+    std::map<GameObject*, GameObject*> CollidedObjects;
     for (auto& id_go : gos) {
         id_go.second.updateScript();
         Collider* now = id_go.second.getCollider();
         if (now) {
             for (auto& id_go2 : gos) {
+                if (&id_go == &id_go2) continue;
                 Collider* temp = id_go2.second.getCollider();
-                if (temp->isColliding(*id_go.second.getCollider())) {
-                    id_go.second.getScript()->onColliderEnter(&id_go.second,*temp);
+                if (temp->isColliding(*now)) {
+                    CollidedObjects.insert(std::pair<GameObject*, GameObject*>(&id_go.second, &id_go2.second));
                 }
             }
         }
+    }
+    for (auto& goPair : CollidedObjects) {
+        goPair.first->getScript()->onColliderEnter(goPair.second, *goPair.second->getCollider());
+        goPair.second->getScript()->onColliderEnter(goPair.first, *goPair.first->getCollider());
     }
 }
 
