@@ -125,8 +125,8 @@ Collider* GameObject::getCollider()
 	if (component[2]) {
 		return &collider;
 	}
-	Collider idle;
-	return &idle;
+	//Collider idle;
+	return nullptr;
 }
 
 void GameObject::startScript()

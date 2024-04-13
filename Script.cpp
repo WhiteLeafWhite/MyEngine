@@ -19,3 +19,7 @@ Script* Script::instance()
 void Script::addListener(const InputListener& l)
 {
 }
+
+void Script::onColliderEnter(GameObject* me,Collider& co)
+{
+}

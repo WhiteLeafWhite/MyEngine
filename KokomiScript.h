@@ -13,6 +13,7 @@ public:bool mouseFocus;
 	void notOnMouse();
 	void onClick(GameObject *me);
 	void start(GameObject* me);
+	void onColliderEnter(GameObject* me,Collider& co);
 	Script* instance() override;
 };
 

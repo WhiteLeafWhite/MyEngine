@@ -47,6 +47,15 @@ void GameObjectManager::updateScript_all()
 {
     for (auto& id_go : gos) {
         id_go.second.updateScript();
+        Collider* now = id_go.second.getCollider();
+        if (now) {
+            for (auto& id_go2 : gos) {
+                Collider* temp = id_go2.second.getCollider();
+                if (temp->isColliding(*id_go.second.getCollider())) {
+                    id_go.second.getScript()->onColliderEnter(&id_go.second,*temp);
+                }
+            }
+        }
     }
 }
 

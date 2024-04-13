@@ -59,6 +59,11 @@ void KokomiScript::start(GameObject* me)
 		}, me);
 }
 
+void KokomiScript::onColliderEnter(GameObject* me,Collider& co)
+{
+	me->position = glm::vec2(rand() % 500, rand() % 500);
+}
+
 Script* KokomiScript::instance()
 {
 	KokomiScript* a = new KokomiScript();
