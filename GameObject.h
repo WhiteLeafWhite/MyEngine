@@ -29,8 +29,12 @@ public:
 	Script *script;
 	//名字
 	std::string name;
+	std::string tag;
+	//ID相关
+	int ID;
 	//构造方法
 	GameObject();
+	void Destroy();
 	//自身的位置，大小，旋转角度
 	glm::vec2 size;
 	float angle;

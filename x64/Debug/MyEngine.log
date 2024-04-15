@@ -1,3 +1,19 @@
-﻿  GameObjectManager.cpp
+﻿  Collider.cpp
 D:\my_game\MyEngine\MyShader.h(4,10): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+  GameObject.cpp
+D:\my_game\MyEngine\MyShader.h(4,10): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+  GameObjectManager.cpp
+D:\my_game\MyEngine\MyShader.h(4,10): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+  SnakeScript.cpp
+D:\my_game\MyEngine\MyShader.h(4,10): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+D:\my_game\MyEngine\SnakeScript.cpp(17,40): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+D:\my_game\MyEngine\SnakeScript.cpp(17,26): warning C4244: “参数”: 从“int”转换到“float”，可能丢失数据
+D:\my_game\MyEngine\SnakeScript.cpp(27,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  main.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\minwindef.h(130,1): warning C4005: “APIENTRY”: 宏重定义
+D:\ThirdParty\Include\glad\glad.h(32): message : 参见“APIENTRY”的前一个定义
+D:\my_game\MyEngine\MyShader.h(4,10): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+  正在生成代码...
+D:\my_game\MyEngine\GameObject.cpp(85): warning C4172: 返回局部变量或临时变量的地址: idle
+D:\my_game\MyEngine\GameObject.cpp(111): warning C4172: 返回局部变量或临时变量的地址: idle
   MyEngine.vcxproj -> D:\my_game\MyEngine\x64\Debug\MyEngine.exe

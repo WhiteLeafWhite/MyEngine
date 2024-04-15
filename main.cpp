@@ -43,7 +43,7 @@ void processInput(GLFWwindow* window)
 }
 
 GameObject makehosino();
-GameObject makemika();
+GameObject makeSwissRoll();
 GameObject makebigsnake();
 GameObject makekokomi();
 GLFWwindow* window;
@@ -91,16 +91,13 @@ int main() {
 	ResourceManager::LoadTexture("skin/mika.jpg", false, "mikaTexture");
 	ResourceManager::LoadTexture("skin/bigsnake.jpg", false, "bigsnakeTexture");
 	ResourceManager::LoadTexture("skin/fish.jpeg", false, "kokomiTexture");
+	ResourceManager::LoadTexture("skin/swissRoll.png", true, "swissRollTexture");
 	//制作预制体
 	//保存预制体的“工序”
 	PrefabManager::LoadPrefab(makehosino, "hoshino");
-	PrefabManager::LoadPrefab(makemika, "mika");
-	PrefabManager::LoadPrefab(makebigsnake, "bigsnake");
-	PrefabManager::LoadPrefab(makekokomi, "kokomi");
+	PrefabManager::LoadPrefab(makeSwissRoll, "swissRoll");
 	//生成一些GameObject
-	GameObjectManager::getinstance()->emplace_go(PrefabManager::MakePrefab("kokomi"));
-	GameObjectManager::getinstance()->emplace_go(PrefabManager::MakePrefab("kokomi"));
-	GameObjectManager::getinstance()->emplace_go(PrefabManager::MakePrefab("kokomi"));
+	GameObjectManager::getinstance()->emplace_go(PrefabManager::MakePrefab("swissRoll"));
 	GameObjectManager::getinstance()->start_all();
 	while (!glfwWindowShouldClose(window))
 	{
@@ -137,6 +134,7 @@ int main() {
 GameObject makehosino()
 {
 	GameObject hosino;
+	hosino.name = "小鸟游星野";
 	Renderer r(ResourceManager::GetShader("characterShader"), ResourceManager::GetTexture("hosinoTexture"));
 	hosino.addRenderer(r);
 	//HosinoScript s(window,"alice");
@@ -145,34 +143,16 @@ GameObject makehosino()
 	return hosino;
 }
 
-GameObject makemika() {
-	GameObject mika;
-	Renderer r(ResourceManager::GetShader("characterShader"), ResourceManager::GetTexture("mikaTexture"));
-	mika.addRenderer(r);
-	HosinoScript s(window, "mika");
-	mika.addScript("HosinoScript");
-	return mika;
-}
-
-GameObject makebigsnake()
+GameObject makeSwissRoll()
 {
-	GameObject snake;
-	Renderer r(ResourceManager::GetShader("characterShader"), ResourceManager::GetTexture("bigsnakeTexture"));
-	snake.addRenderer(r);
-	SnakeScript s(window, "mika");
-	snake.addScript("SnakeScript");
-	return snake;
-}
+	GameObject roll;
+	roll.tag = "bullet";
+	roll.name = "瑞士卷";
+	Renderer r(ResourceManager::GetShader("characterShader"), ResourceManager::GetTexture("swissRollTexture"));
+	roll.addRenderer(r);
+	//HosinoScript s(window,"alice");
+	SwissRollScript s;
+	roll.addScript("SwissRollScript");
 
-GameObject makekokomi()
-{
-	GameObject kokomi;
-	kokomi.name = "珊瑚宫心海";
-	Renderer r(ResourceManager::GetShader("characterShader"), ResourceManager::GetTexture("kokomiTexture"));
-	kokomi.addRenderer(r);
-	KokomiScript s;
-	kokomi.addScript("KokomiScript");
-	Collider c;
-	kokomi.addCollider(c);
-	return kokomi;
+	return roll;
 }

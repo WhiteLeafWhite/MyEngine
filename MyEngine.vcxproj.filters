@@ -108,6 +108,9 @@
     <ClCompile Include="KokomiScript.cpp">
       <Filter>源文件\scripts</Filter>
     </ClCompile>
+    <ClCompile Include="SwissRollScript.cpp">
+      <Filter>源文件\scripts</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Component.h">
@@ -172,6 +175,9 @@
     </ClInclude>
     <ClInclude Include="scripts.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SwissRollScript.h">
+      <Filter>源文件\scripts</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

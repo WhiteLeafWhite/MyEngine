@@ -1,5 +1,6 @@
 #include "GameObject.h"
 #include "Globaldefine.h"
+#include "GameObjectManager.h"
 GameObject::GameObject()
 {
 	position = glm::vec2(0.0f, 0.0f);
@@ -18,6 +19,14 @@ GameObject::GameObject()
 glm::vec2 GameObject::getPosition()
 {
 	return position;
+}
+
+void GameObject::Destroy()
+{
+	if (component[3]) {
+		script->onDestroy(this);
+	}
+	GameObjectManager::getinstance()->deleteGo(ID);
 }
 
 void GameObject::SetPostion(float xx, float yy)

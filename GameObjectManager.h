@@ -12,6 +12,7 @@ public:
 	void start_all();
 	void updateScript_all();
 	void uodateRigidbody_all();
+	void deleteGo(int ID);
 	GameObject& getObject(int id);
 private:
 	static GameObjectManager* gomanager;
@@ -20,5 +21,6 @@ private:
 	GameObjectManager operator =(const GameObjectManager& x) = delete;
 	static std::mutex gom_mutex;
 	std::map<int,GameObject> gos;
+	std::vector<int> destroyBuf;
 	int idCounter;
 };

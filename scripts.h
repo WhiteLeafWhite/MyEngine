@@ -3,3 +3,4 @@
 #include "HosinoScript.h"
 #include "SnakeScript.h"
 #include "KokomiScript.h"
+#include "SwissRollScript.h"

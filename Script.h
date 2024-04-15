@@ -13,6 +13,7 @@ public:
     virtual Script* instance();
     virtual void addListener(const InputListener& l);
     virtual void onColliderEnter(GameObject* me,Collider& co);
+    virtual void onDestroy(GameObject* me);
 private:
     
 };

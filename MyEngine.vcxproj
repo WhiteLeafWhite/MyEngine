@@ -164,6 +164,7 @@
     <ClCompile Include="Script.cpp" />
     <ClCompile Include="AliceScript.cpp" />
     <ClCompile Include="SnakeScript.cpp" />
+    <ClCompile Include="SwissRollScript.cpp" />
     <ClCompile Include="Texture2D.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -187,6 +188,7 @@
     <ClInclude Include="scripts.h" />
     <ClInclude Include="SnakeScript.h" />
     <ClInclude Include="stb_image.h" />
+    <ClInclude Include="SwissRollScript.h" />
     <ClInclude Include="Texture2D.h" />
   </ItemGroup>
   <ItemGroup>
