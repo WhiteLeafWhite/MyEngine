@@ -145,7 +145,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\chess\棋\MyShader.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="GameObject.cpp" />
@@ -156,6 +155,7 @@
     <ClCompile Include="KokomiScript.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MousePos.cpp" />
+    <ClCompile Include="MyShader.cpp" />
     <ClCompile Include="NagisaScript.cpp" />
     <ClCompile Include="PrefabManager.cpp" />
     <ClCompile Include="Rect.cpp" />
@@ -169,7 +169,6 @@
     <ClCompile Include="Texture2D.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\chess\棋\MyShader.h" />
     <ClInclude Include="AliceScript.h" />
     <ClInclude Include="Collider.h" />
     <ClInclude Include="Component.h" />
@@ -180,6 +179,7 @@
     <ClInclude Include="InputListener.h" />
     <ClInclude Include="KokomiScript.h" />
     <ClInclude Include="MousePos.h" />
+    <ClInclude Include="MyShader.h" />
     <ClInclude Include="NagisaScript.h" />
     <ClInclude Include="PrefabManager.h" />
     <ClInclude Include="Rect.h" />

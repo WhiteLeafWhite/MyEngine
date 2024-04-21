@@ -81,9 +81,6 @@
     <ClCompile Include="ResourceManager.cpp">
       <Filter>源文件\ResourceLayer</Filter>
     </ClCompile>
-    <ClCompile Include="..\chess\棋\MyShader.cpp">
-      <Filter>源文件\ResourceLayer</Filter>
-    </ClCompile>
     <ClCompile Include="Texture2D.cpp">
       <Filter>源文件\ResourceLayer</Filter>
     </ClCompile>
@@ -113,6 +110,9 @@
     </ClCompile>
     <ClCompile Include="NagisaScript.cpp">
       <Filter>源文件\scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="MyShader.cpp">
+      <Filter>源文件\ResourceLayer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -149,9 +149,6 @@
     <ClInclude Include="ResourceManager.h">
       <Filter>头文件\ResourceLayer</Filter>
     </ClInclude>
-    <ClInclude Include="..\chess\棋\MyShader.h">
-      <Filter>头文件\ResourceLayer</Filter>
-    </ClInclude>
     <ClInclude Include="Texture2D.h">
       <Filter>头文件\ResourceLayer</Filter>
     </ClInclude>
@@ -184,6 +181,9 @@
     </ClInclude>
     <ClInclude Include="NagisaScript.h">
       <Filter>源文件\scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="MyShader.h">
+      <Filter>头文件\ResourceLayer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

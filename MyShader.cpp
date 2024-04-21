@@ -59,7 +59,7 @@ MyShader::MyShader(const char* vertexPath, const char* fragmentPath) {
 	glDeleteShader(fragmentShader);
 }
 
-MyShader::MyShader(const char* vertexPath, const char* fragmentPath,const char*geometryPath) {
+MyShader::MyShader(const char* vertexPath, const char* fragmentPath, const char* geometryPath) {
 	std::string vertexCode;
 	std::string fragmentCode;
 	std::string geometryCode;
@@ -76,7 +76,7 @@ MyShader::MyShader(const char* vertexPath, const char* fragmentPath,const char*g
 		fShaderFile.open(fragmentPath);
 		gShaderFile.open(geometryPath);
 		//×Ö·û´®Á÷£¬·½±ã¶ÁÈ¡
-		std::stringstream vShaderStream, fShaderStream,gShaserStream;
+		std::stringstream vShaderStream, fShaderStream, gShaserStream;
 		vShaderStream << vShaderFile.rdbuf();
 		fShaderStream << fShaderFile.rdbuf();
 		gShaserStream << gShaderFile.rdbuf();
@@ -93,7 +93,7 @@ MyShader::MyShader(const char* vertexPath, const char* fragmentPath,const char*g
 	const char* vShaderCode = vertexCode.c_str();
 	const char* fShaderCode = fragmentCode.c_str();
 	const char* gShaderCode = geometryCode.c_str();
-	unsigned int vertexShader, fragmentShader,geometryShader;
+	unsigned int vertexShader, fragmentShader, geometryShader;
 	int success;
 	char infoLog[512];
 	vertexShader = glCreateShader(GL_VERTEX_SHADER);
@@ -115,7 +115,7 @@ MyShader::MyShader(const char* vertexPath, const char* fragmentPath,const char*g
 	geometryShader = glCreateShader(GL_GEOMETRY_SHADER);
 	glShaderSource(geometryShader, 1, &gShaderCode, NULL);
 	glCompileShader(geometryShader);
-	glGetShaderiv(geometryShader,GL_COMPILE_STATUS,&success);
+	glGetShaderiv(geometryShader, GL_COMPILE_STATUS, &success);
 	if (!success) {
 		glGetProgramInfoLog(fragmentShader, 512, NULL, infoLog);
 		std::cout << "ERROR::SHADER::GEOMETRY_COMPILE_ERROR\n" << infoLog << std::endl;
@@ -150,6 +150,10 @@ void MyShader::setInt(const std::string& name, int value) const
 void MyShader::setFloat(const std::string& name, float value) const
 {
 	glUniform1f(glGetUniformLocation(ID, name.c_str()), value);
+}
+void MyShader::setVec3(const std::string& name, glm::vec3 value) const
+{
+	glUniform3fv(glGetUniformLocation(ID, name.c_str()), 1, glm::value_ptr(value));
 }
 void MyShader::setMat4(const std::string& name, glm::mat4 value) const
 {
