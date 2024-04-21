@@ -14,7 +14,7 @@ void SnakeScript::update(GameObject* me)
 	if (!pressed&&glfwGetKey(window, GLFW_KEY_F) == GLFW_PRESS) {
 		pressed = true;
 		GameObject temp = PrefabManager::MakePrefab("mika");
-		temp.SetPostion(rand() % 500, rand() % 500);
+		temp.SetPosition(rand() % 500, rand() % 500);
 		GameObjectManager::getinstance()->emplace_go(temp);
 	}
 	if (pressed && glfwGetKey(window, GLFW_KEY_F) == GLFW_RELEASE) {

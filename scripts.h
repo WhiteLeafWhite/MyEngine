@@ -4,3 +4,4 @@
 #include "SnakeScript.h"
 #include "KokomiScript.h"
 #include "SwissRollScript.h"
+#include "NagisaScript.h"

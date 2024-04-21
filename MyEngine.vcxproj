@@ -156,6 +156,7 @@
     <ClCompile Include="KokomiScript.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MousePos.cpp" />
+    <ClCompile Include="NagisaScript.cpp" />
     <ClCompile Include="PrefabManager.cpp" />
     <ClCompile Include="Rect.cpp" />
     <ClCompile Include="Renderer.cpp" />
@@ -179,6 +180,7 @@
     <ClInclude Include="InputListener.h" />
     <ClInclude Include="KokomiScript.h" />
     <ClInclude Include="MousePos.h" />
+    <ClInclude Include="NagisaScript.h" />
     <ClInclude Include="PrefabManager.h" />
     <ClInclude Include="Rect.h" />
     <ClInclude Include="Renderer.h" />

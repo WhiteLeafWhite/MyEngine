@@ -30,7 +30,7 @@ void whatCanISay(GameObject* me) {
 void KokomiScript::onClick(GameObject* me)
 {
 	if (this->mouseFocus) {
-		me->SetPostion(rand() % 500, rand() % 500);
+		me->SetPosition(rand() % 500, rand() % 500);
 		whatCanISay(me);
 	}
 }
@@ -65,7 +65,7 @@ void KokomiScript::start(GameObject* me)
 
 void KokomiScript::onColliderEnter(GameObject* me,Collider& co)
 {
-	me->SetPostion(rand() % 500, rand() % 500);
+	me->SetPosition(rand() % 500, rand() % 500);
 }
 
 Script* KokomiScript::instance()

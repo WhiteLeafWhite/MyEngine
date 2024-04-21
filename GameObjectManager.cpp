@@ -57,7 +57,7 @@ void GameObjectManager::updateScript_all()
             for (auto& id_go2 : gos) {
                 if (&id_go == &id_go2) continue;
                 Collider* temp = id_go2.second.getCollider();
-                if (temp->isColliding(*now)) {
+                if (temp&&temp->isColliding(*now)) {
                     //暂存碰在一起的物体，不然可能一个触发onColliderEnter之后跑了，导致本该触发的
                     //另一个onColliderEnter不触发
                     CollidedObjects.insert(std::pair<GameObject*, GameObject*>(&id_go.second, &id_go2.second));
@@ -66,7 +66,7 @@ void GameObjectManager::updateScript_all()
         }
     }
     for (auto& goPair : CollidedObjects) {
-        goPair.first->getScript()->onColliderEnter(goPair.second, *goPair.second->getCollider());
+        goPair.first->getScript()->onColliderEnter(goPair.first, *goPair.second->getCollider());
     }
     for (auto id : destroyBuf) {
         gos.erase(id);

@@ -29,7 +29,7 @@ void GameObject::Destroy()
 	GameObjectManager::getinstance()->deleteGo(ID);
 }
 
-void GameObject::SetPostion(float xx, float yy)
+void GameObject::SetPosition(float xx, float yy)
 {
 	position.x = xx;
 	position.y = yy;
@@ -69,6 +69,11 @@ void GameObject::Scale(float dwidth, float dheight)
 	if (component[2]) {
 		getCollider()->adjustBox(position.x, position.y, size.x, size.y);
 	}
+}
+
+void GameObject::SetPosition(glm::vec2 ppos)
+{
+	position = ppos;
 }
 
 void GameObject::addRenderer(Renderer r)

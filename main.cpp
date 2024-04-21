@@ -44,8 +44,8 @@ void processInput(GLFWwindow* window)
 
 GameObject makehosino();
 GameObject makeSwissRoll();
-GameObject makebigsnake();
-GameObject makekokomi();
+GameObject makeNagisa();
+GameObject makeMika();
 GLFWwindow* window;
 vector<GameObject> wives;
 int main() {
@@ -92,12 +92,16 @@ int main() {
 	ResourceManager::LoadTexture("skin/bigsnake.jpg", false, "bigsnakeTexture");
 	ResourceManager::LoadTexture("skin/fish.jpeg", false, "kokomiTexture");
 	ResourceManager::LoadTexture("skin/swissRoll.png", true, "swissRollTexture");
+	ResourceManager::LoadTexture("skin/Nagisa.png", true, "NagisaTexture");
 	//制作预制体
 	//保存预制体的“工序”
+	PrefabManager::LoadPrefab(makeMika, "mika");
 	PrefabManager::LoadPrefab(makehosino, "hoshino");
 	PrefabManager::LoadPrefab(makeSwissRoll, "swissRoll");
+	PrefabManager::LoadPrefab(makeNagisa, "nagisa");
 	//生成一些GameObject
-	GameObjectManager::getinstance()->emplace_go(PrefabManager::MakePrefab("swissRoll"));
+	GameObjectManager::getinstance()->emplace_go(PrefabManager::MakePrefab("nagisa"));
+	GameObjectManager::getinstance()->emplace_go(PrefabManager::MakePrefab("mika"));
 	GameObjectManager::getinstance()->start_all();
 	while (!glfwWindowShouldClose(window))
 	{
@@ -150,9 +154,34 @@ GameObject makeSwissRoll()
 	roll.name = "瑞士卷";
 	Renderer r(ResourceManager::GetShader("characterShader"), ResourceManager::GetTexture("swissRollTexture"));
 	roll.addRenderer(r);
-	//HosinoScript s(window,"alice");
 	SwissRollScript s;
 	roll.addScript("SwissRollScript");
-
+	Collider c;
+	roll.addCollider(c);
 	return roll;
+}
+
+GameObject makeNagisa()
+{
+	GameObject nagisa;
+	nagisa.tag = "player";
+	nagisa.name = "桐藤渚";
+	Renderer r(ResourceManager::GetShader("characterShader"), ResourceManager::GetTexture("NagisaTexture"));
+	nagisa.addRenderer(r);
+	NagisaScript s;
+	nagisa.addScript("NagisaScript");
+	return nagisa;
+}
+
+GameObject makeMika()
+{
+	GameObject mika;
+	mika.tag = "enemy";
+	mika.name = "未花";
+	Renderer r(ResourceManager::GetShader("characterShader"), ResourceManager::GetTexture("mikaTexture"));
+	mika.addRenderer(r);
+	mika.SetPosition(600, 200);
+	Collider c;
+	mika.addCollider(c);
+	return mika;
 }

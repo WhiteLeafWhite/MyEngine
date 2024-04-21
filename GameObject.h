@@ -39,7 +39,8 @@ public:
 	glm::vec2 size;
 	float angle;
 	glm::vec2 getPosition();
-	void SetPostion(float xx, float yy);
+	void SetPosition(glm::vec2 ppos);
+	void SetPosition(float xx, float yy);
 	void Translate(float deltaX,float deltaY);
 	void Rotate(float deltaA);
 	void Scale(float dwidth, float dheight);
