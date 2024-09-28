@@ -5,3 +5,4 @@
 #include "KokomiScript.h"
 #include "SwissRollScript.h"
 #include "NagisaScript.h"
+#include "ZakoScript.h"

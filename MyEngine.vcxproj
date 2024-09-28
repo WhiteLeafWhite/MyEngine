@@ -147,6 +147,7 @@
   <ItemGroup>
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="Component.cpp" />
+    <ClCompile Include="E_Message.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameObjectManager.cpp" />
     <ClCompile Include="glad.c" />
@@ -154,6 +155,7 @@
     <ClCompile Include="InputListener.cpp" />
     <ClCompile Include="KokomiScript.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MessageBox.cpp" />
     <ClCompile Include="MousePos.cpp" />
     <ClCompile Include="MyShader.cpp" />
     <ClCompile Include="NagisaScript.cpp" />
@@ -167,17 +169,20 @@
     <ClCompile Include="SnakeScript.cpp" />
     <ClCompile Include="SwissRollScript.cpp" />
     <ClCompile Include="Texture2D.cpp" />
+    <ClCompile Include="ZakoScript.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AliceScript.h" />
     <ClInclude Include="Collider.h" />
     <ClInclude Include="Component.h" />
+    <ClInclude Include="E_Message.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GameObjectManager.h" />
     <ClInclude Include="Globaldefine.h" />
     <ClInclude Include="HosinoScript.h" />
     <ClInclude Include="InputListener.h" />
     <ClInclude Include="KokomiScript.h" />
+    <ClInclude Include="MessageBox.h" />
     <ClInclude Include="MousePos.h" />
     <ClInclude Include="MyShader.h" />
     <ClInclude Include="NagisaScript.h" />
@@ -192,6 +197,7 @@
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="SwissRollScript.h" />
     <ClInclude Include="Texture2D.h" />
+    <ClInclude Include="ZakoScript.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="fragment.fs" />

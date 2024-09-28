@@ -33,6 +33,7 @@
 #include "PrefabManager.h"
 #include "GameObjectManager.h"
 #include "MousePos.h"
+#include "MessageBox.h"
 using namespace std;
 const int width = 800;
 const int height = 800;
@@ -101,7 +102,9 @@ int main() {
 	PrefabManager::LoadPrefab(makeNagisa, "nagisa");
 	//生成一些GameObject
 	GameObjectManager::getinstance()->emplace_go(PrefabManager::MakePrefab("nagisa"));
-	GameObjectManager::getinstance()->emplace_go(PrefabManager::MakePrefab("mika"));
+	GameObjectManager::getinstance()->emplace_go(PrefabManager::MakePrefab("nagisa"));
+	GameObjectManager::getinstance()->emplace_go(PrefabManager::MakePrefab("nagisa"));
+	GameObjectManager::getinstance()->emplace_go(PrefabManager::MakePrefab("nagisa"));
 	GameObjectManager::getinstance()->start_all();
 	while (!glfwWindowShouldClose(window))
 	{
@@ -118,6 +121,7 @@ int main() {
 
 		//这里是绘制并更新GameObject的地方
 		GameObjectManager::getinstance()->draw_all();
+		EMessageBox::get_instance()->clear_message();
 		GameObjectManager::getinstance()->updateScript_all();
 
 		//交换缓冲
@@ -168,8 +172,8 @@ GameObject makeNagisa()
 	nagisa.name = "桐藤渚";
 	Renderer r(ResourceManager::GetShader("characterShader"), ResourceManager::GetTexture("NagisaTexture"));
 	nagisa.addRenderer(r);
-	NagisaScript s;
-	nagisa.addScript("NagisaScript");
+	ZakoScript s;
+	nagisa.addScript("ZakoScript");
 	return nagisa;
 }
 

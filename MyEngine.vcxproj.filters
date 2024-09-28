@@ -46,6 +46,9 @@
     <Filter Include="CoreLayer">
       <UniqueIdentifier>{1e0d515b-31a5-4d61-beac-6743b7b36df2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\Message">
+      <UniqueIdentifier>{0a756715-8822-4121-8a77-fb5040f5d5b1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Component.cpp">
@@ -113,6 +116,15 @@
     </ClCompile>
     <ClCompile Include="MyShader.cpp">
       <Filter>源文件\ResourceLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="ZakoScript.cpp">
+      <Filter>源文件\scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="E_Message.cpp">
+      <Filter>源文件\Message</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageBox.cpp">
+      <Filter>源文件\Message</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +196,15 @@
     </ClInclude>
     <ClInclude Include="MyShader.h">
       <Filter>头文件\ResourceLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="ZakoScript.h">
+      <Filter>源文件\scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="E_Message.h">
+      <Filter>源文件\Message</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageBox.h">
+      <Filter>源文件\Message</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
